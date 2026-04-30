@@ -1,26 +1,49 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Toaster } from "@/components/ui/sonner";
+import { Navbar } from "@/components/portfolio/Navbar";
+import { Hero } from "@/components/portfolio/Hero";
+import { About } from "@/components/portfolio/About";
+import { Skills } from "@/components/portfolio/Skills";
+import { Projects } from "@/components/portfolio/Projects";
+import { Internships } from "@/components/portfolio/Internships";
+import { Certifications } from "@/components/portfolio/Certifications";
+import { Contact } from "@/components/portfolio/Contact";
+import { Footer } from "@/components/portfolio/Footer";
 
 export const Route = createFileRoute("/")({
   component: Index,
+  head: () => ({
+    meta: [
+      { title: "Sandhiya — MERN Stack Developer Portfolio" },
+      {
+        name: "description",
+        content:
+          "Portfolio of Sandhiya, a MERN stack developer specializing in React, Node.js, Express, and MongoDB. Explore projects, internships, and certifications.",
+      },
+      { property: "og:title", content: "Sandhiya — MERN Stack Developer" },
+      {
+        property: "og:description",
+        content: "Modern full-stack web experiences crafted with the MERN stack.",
+      },
+    ],
+  }),
 });
 
-// IMPORTANT: Replace this placeholder. For sites with multiple pages (About, Services, Contact, etc.),
-// create separate route files (about.tsx, services.tsx, contact.tsx) — don't put all pages in this file.
-function PlaceholderIndex() {
+function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="dark min-h-screen bg-background text-foreground">
+      <Navbar />
+      <main>
+        <Hero />
+        <About />
+        <Skills />
+        <Projects />
+        <Internships />
+        <Certifications />
+        <Contact />
+      </main>
+      <Footer />
+      <Toaster />
     </div>
   );
-}
-
-function Index() {
-  return <PlaceholderIndex />;
 }
