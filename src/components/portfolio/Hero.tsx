@@ -60,20 +60,22 @@ export function Hero() {
           </div>
         </motion.div>
         <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
+          initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7, delay: 0.2 }}
-          className="relative"
+          className="relative flex justify-center md:justify-end"
         >
-          <div className="absolute inset-0 bg-gradient-primary blur-3xl opacity-30 rounded-full" />
-          <div className="relative aspect-square rounded-3xl overflow-hidden border-2 border-border shadow-glow animate-glow-pulse">
-            <img
-              src={heroImg}
-              alt="Sandhiya — MERN Stack Developer"
-              width={1024}
-              height={1024}
-              className="w-full h-full object-cover"
-            />
+          <div className="relative w-56 sm:w-64 md:w-72 lg:w-80">
+            <div className="absolute -inset-4 bg-gradient-primary blur-2xl opacity-25 rounded-2xl" />
+            <div className="relative aspect-[4/5] rounded-2xl overflow-hidden border border-border shadow-glow">
+              <img
+                src={heroImg}
+                alt="Sandhiya — MERN Stack Developer"
+                width={640}
+                height={800}
+                className="w-full h-full object-cover"
+              />
+            </div>
           </div>
         </motion.div>
       </div>

@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 import { GraduationCap, Code, Rocket, Users } from "lucide-react";
 
 const stats = [
-  { icon: Code, label: "Projects", value: "10+" },
+  { icon: Code, label: "Projects Built", value: "10+" },
   { icon: Rocket, label: "Internships", value: "3" },
   { icon: GraduationCap, label: "Certifications", value: "6+" },
-  { icon: Users, label: "Happy Clients", value: "5+" },
+  { icon: Users, label: "Tech Communities", value: "4+" },
 ];
 
 export function About() {
@@ -33,19 +33,23 @@ export function About() {
             className="space-y-5 text-muted-foreground leading-relaxed text-lg"
           >
             <p>
-              I'm a final-year Computer Science student specializing in the{" "}
-              <span className="text-foreground font-medium">MERN stack</span>. My journey
-              into web development started with a curiosity to understand how the web works —
-              today, that curiosity drives me to build full-stack applications that solve real problems.
+              I'm a Computer Science student specializing in the{" "}
+              <span className="text-foreground font-medium">MERN stack</span> — MongoDB,
+              Express, React, and Node.js. My journey into web development started with a
+              simple curiosity to understand how websites work, and it has grown into a
+              genuine passion for building full-stack applications.
             </p>
             <p>
-              I love crafting clean, scalable architectures, designing intuitive interfaces, and
-              shipping features that delight users. Whether it's a REST API, a real-time dashboard,
-              or a polished UI, I focus on quality and performance at every layer.
+              Through my coursework and self-driven exploration, I've built multiple{" "}
+              <span className="text-foreground font-medium">academic and personal projects</span>{" "}
+              — from REST APIs and dashboards to polished front-end interfaces — focusing on
+              clean architecture, intuitive design, and writing code I'm proud of.
             </p>
             <p>
-              When I'm not coding, you'll find me contributing to open-source, exploring new
-              frameworks, or mentoring fellow students.
+              I'm passionate about learning new technologies and applying them to{" "}
+              <span className="text-foreground font-medium">real-world problems</span>. When
+              I'm not coding, you'll find me exploring new frameworks, reading developer
+              blogs, or collaborating with peers on side projects.
             </p>
           </motion.div>
           <motion.div
