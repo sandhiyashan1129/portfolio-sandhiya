@@ -32,13 +32,13 @@ const certs: Cert[] = [
     title: "Workshop YUKTA: From Prompts to Agents using N8N",
     desc: "Hands-on workshop on building AI agents using prompts and automation tools",
     image: certYukta,
-    link: "https://drive.google.com/file/d/17SMaXf2AKjgAc8WBmdGePCNSgcxd0W07/view",
+    link: "https://drive.google.com/file/d/1pITWzsKPgji7SgPJ7xq12lw0QiV3CUbv/view",
   },
   {
     title: "L&T Course: Python Programming and Web Development",
     desc: "Completed course on Python programming and web development concepts",
     image: certLT,
-    link: "https://drive.google.com/file/d/1pITWzsKPgji7SgPJ7xq12lw0QiV3CUbv/view",
+    link: "https://drive.google.com/file/d/17SMaXf2AKjgAc8WBmdGePCNSgcxd0W07/view",
   },
   {
     title: "National Level Workshop: Cybersecurity Trends",
