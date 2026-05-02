@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Download, Mail, Github, Linkedin } from "lucide-react";
 import heroImg from "@/assets/hero-portrait.jpg";
+import { AnimatedHeading } from "./AnimatedHeading";
 
 export function Hero() {
   return (
@@ -20,13 +21,28 @@ export function Hero() {
             <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
             Available for opportunities
           </div>
-          <h1 className="text-5xl md:text-7xl font-bold leading-[1.05]">
-            Hi, I'm <span className="text-gradient">Sandhiya</span>
-            <br />
-            <span className="text-3xl md:text-5xl text-muted-foreground font-display">
-              MERN Stack Developer
-            </span>
-          </h1>
+          <AnimatedHeading
+            as="h1"
+            className="text-5xl md:text-7xl font-bold leading-[1.05]"
+            letterDelay={0.05}
+            segments={[
+              { text: "Hi, I'm " },
+              { text: "Sandhiya", className: "text-gradient" },
+            ]}
+            trailing={
+              <>
+                <br />
+                <motion.span
+                  initial={{ opacity: 0, y: 12 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.9, ease: "easeOut" }}
+                  className="text-3xl md:text-5xl text-muted-foreground font-display inline-block"
+                >
+                  MERN Stack Developer
+                </motion.span>
+              </>
+            }
+          />
           <p className="text-lg text-muted-foreground max-w-xl leading-relaxed">
             A passionate full-stack developer crafting modern, performant web experiences with
             MongoDB, Express, React, and Node.js. Turning ideas into elegant code.

@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Calendar, Briefcase } from "lucide-react";
+import { AnimatedHeading } from "./AnimatedHeading";
 import i1 from "@/assets/internship-1.jpg";
 import i2 from "@/assets/internship-2.jpg";
 import i3 from "@/assets/internship-3.jpg";
@@ -43,9 +44,14 @@ export function Internships() {
           className="text-center mb-16"
         >
           <p className="text-accent text-sm uppercase tracking-widest mb-3">Internships</p>
-          <h2 className="text-4xl md:text-5xl font-bold">
-            Professional <span className="text-gradient">Experience</span>
-          </h2>
+          <AnimatedHeading
+            as="h2"
+            className="text-4xl md:text-5xl font-bold"
+            segments={[
+              { text: "Professional " },
+              { text: "Experience", className: "text-gradient" },
+            ]}
+          />
         </motion.div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {internships.map((it, i) => (
