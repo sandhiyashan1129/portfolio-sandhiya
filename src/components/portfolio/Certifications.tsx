@@ -80,7 +80,7 @@ export function Certifications() {
               transition={{ duration: 0.5, delay: i * 0.08 }}
               className="group bg-gradient-card border border-border rounded-2xl overflow-hidden shadow-card hover:shadow-glow hover:-translate-y-2 hover:border-primary transition-smooth flex flex-col"
             >
-              <div className="aspect-video overflow-hidden bg-secondary relative">
+              <div className="aspect-video overflow-hidden bg-white relative">
                 {c.comingSoon ? (
                   <div className="w-full h-full flex flex-col items-center justify-center bg-gradient-card text-muted-foreground gap-2">
                     <Clock className="w-10 h-10 text-primary" />
@@ -94,7 +94,7 @@ export function Certifications() {
                     height={640}
                     loading="lazy"
                     referrerPolicy="no-referrer"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-smooth"
+                    className="w-full h-full object-contain p-2 group-hover:scale-105 transition-smooth"
                   />
                 )}
               </div>
