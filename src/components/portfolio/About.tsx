@@ -1,5 +1,6 @@
-import { motion } from "framer-motion";
 import { GraduationCap, Code, Rocket, Users } from "lucide-react";
+import { motion } from "framer-motion";
+import { AnimatedHeading } from "./AnimatedHeading";
 
 const stats = [
   { icon: Code, label: "Projects Built", value: "10+" },
@@ -20,9 +21,14 @@ export function About() {
           className="text-center mb-16"
         >
           <p className="text-accent text-sm uppercase tracking-widest mb-3">About Me</p>
-          <h2 className="text-4xl md:text-5xl font-bold">
-            Crafting <span className="text-gradient">Digital Experiences</span>
-          </h2>
+          <AnimatedHeading
+            as="h2"
+            className="text-4xl md:text-5xl font-bold"
+            segments={[
+              { text: "Crafting " },
+              { text: "Digital Experiences", className: "text-gradient" },
+            ]}
+          />
         </motion.div>
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <motion.div

@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Github, ExternalLink } from "lucide-react";
+import { AnimatedHeading } from "./AnimatedHeading";
 import p1 from "@/assets/project-1.jpg";
 import p2 from "@/assets/project-2.jpg";
 import p3 from "@/assets/project-3.jpg";
@@ -46,9 +47,14 @@ export function Projects() {
           className="text-center mb-16"
         >
           <p className="text-accent text-sm uppercase tracking-widest mb-3">Projects</p>
-          <h2 className="text-4xl md:text-5xl font-bold">
-            Featured <span className="text-gradient">Work</span>
-          </h2>
+          <AnimatedHeading
+            as="h2"
+            className="text-4xl md:text-5xl font-bold"
+            segments={[
+              { text: "Featured " },
+              { text: "Work", className: "text-gradient" },
+            ]}
+          />
         </motion.div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((p, i) => (

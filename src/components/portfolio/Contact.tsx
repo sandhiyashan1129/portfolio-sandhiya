@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Mail, MapPin, Phone, Send } from "lucide-react";
 import { z } from "zod";
 import { toast } from "sonner";
+import { AnimatedHeading } from "./AnimatedHeading";
 
 const schema = z.object({
   name: z.string().trim().min(2, "Name must be at least 2 characters").max(100),
@@ -40,9 +41,14 @@ export function Contact() {
           className="text-center mb-16"
         >
           <p className="text-accent text-sm uppercase tracking-widest mb-3">Contact</p>
-          <h2 className="text-4xl md:text-5xl font-bold">
-            Let's <span className="text-gradient">Build Together</span>
-          </h2>
+          <AnimatedHeading
+            as="h2"
+            className="text-4xl md:text-5xl font-bold"
+            segments={[
+              { text: "Let's " },
+              { text: "Build Together", className: "text-gradient" },
+            ]}
+          />
           <p className="text-muted-foreground mt-4 max-w-xl mx-auto">
             Got a project in mind or just want to say hi? Drop me a message — I'd love to hear from you.
           </p>

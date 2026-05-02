@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { AnimatedHeading } from "./AnimatedHeading";
 
 const skills = [
   { name: "React", level: 92, color: "from-cyan-400 to-blue-500" },
@@ -23,9 +24,14 @@ export function Skills() {
           className="text-center mb-16"
         >
           <p className="text-accent text-sm uppercase tracking-widest mb-3">Skills</p>
-          <h2 className="text-4xl md:text-5xl font-bold">
-            My <span className="text-gradient">Tech Stack</span>
-          </h2>
+          <AnimatedHeading
+            as="h2"
+            className="text-4xl md:text-5xl font-bold"
+            segments={[
+              { text: "My " },
+              { text: "Tech Stack", className: "text-gradient" },
+            ]}
+          />
         </motion.div>
         <div className="grid md:grid-cols-2 gap-x-12 gap-y-8 max-w-5xl mx-auto">
           {skills.map((s, i) => (
