@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Award, ExternalLink, Clock } from "lucide-react";
+import { AnimatedHeading } from "./AnimatedHeading";
 import placeholder from "@/assets/cert-1.jpg";
 import certIntellipaat from "@/assets/cert-intellipaat.jpeg";
 import certYukta from "@/assets/cert-yukta.jpeg";
@@ -66,9 +67,14 @@ export function Certifications() {
           className="text-center mb-16"
         >
           <p className="text-accent text-sm uppercase tracking-widest mb-3">Certifications</p>
-          <h2 className="text-4xl md:text-5xl font-bold">
-            Continuous <span className="text-gradient">Learning</span>
-          </h2>
+          <AnimatedHeading
+            as="h2"
+            className="text-4xl md:text-5xl font-bold"
+            segments={[
+              { text: "Continuous " },
+              { text: "Learning", className: "text-gradient" },
+            ]}
+          />
         </motion.div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {certs.map((c, i) => (
