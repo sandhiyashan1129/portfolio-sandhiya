@@ -56,9 +56,9 @@ export function Contact() {
             className="lg:col-span-2 space-y-4"
           >
             {[
-              { icon: Mail, label: "Email", value: "sandhiya@example.com" },
-              { icon: Phone, label: "Phone", value: "+91 98765 43210" },
-              { icon: MapPin, label: "Location", value: "Tamil Nadu, India" },
+              { icon: Mail, label: "Email", value: "ssandhiya5542@gmail.com", href: "mailto:ssandhiya5542@gmail.com" },
+              { icon: Phone, label: "Phone", value: "7708875542", href: "tel:+917708875542" },
+              { icon: MapPin, label: "Address", value: "Salem, Tamil Nadu, India" },
             ].map((info) => (
               <div
                 key={info.label}
@@ -67,9 +67,15 @@ export function Contact() {
                 <div className="p-3 rounded-lg bg-primary/10 text-primary">
                   <info.icon className="w-5 h-5" />
                 </div>
-                <div>
+                <div className="min-w-0">
                   <div className="text-xs text-muted-foreground uppercase tracking-wider">{info.label}</div>
-                  <div className="font-medium mt-1">{info.value}</div>
+                  {info.href ? (
+                    <a href={info.href} className="font-medium mt-1 block break-words hover:text-primary transition-smooth">
+                      {info.value}
+                    </a>
+                  ) : (
+                    <div className="font-medium mt-1 break-words">{info.value}</div>
+                  )}
                 </div>
               </div>
             ))}
