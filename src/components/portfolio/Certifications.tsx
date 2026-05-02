@@ -1,6 +1,11 @@
 import { motion } from "framer-motion";
 import { Award, ExternalLink, Clock } from "lucide-react";
 import placeholder from "@/assets/cert-1.jpg";
+import certIntellipaat from "@/assets/cert-intellipaat.jpeg";
+import certYukta from "@/assets/cert-yukta.jpeg";
+import certLT from "@/assets/cert-lt.jpeg";
+import certCyber from "@/assets/cert-cyber.jpeg";
+import certMath from "@/assets/cert-math.jpeg";
 
 type Cert = {
   title: string;
@@ -20,31 +25,31 @@ const certs: Cert[] = [
   {
     title: "Intellipaat: Artificial Intelligence Course",
     desc: "Completed certification in Artificial Intelligence fundamentals and applications",
-    image: "https://drive.google.com/uc?id=1ahG47JrtPMFDrLAJ1b-wqAyrnKXHrziA",
+    image: certIntellipaat,
     link: "https://drive.google.com/file/d/1ahG47JrtPMFDrLAJ1b-wqAyrnKXHrziA/view",
   },
   {
     title: "Workshop YUKTA: From Prompts to Agents using N8N",
     desc: "Hands-on workshop on building AI agents using prompts and automation tools",
-    image: "https://drive.google.com/uc?id=17SMaXf2AKjgAc8WBmdGePCNSgcxd0W07",
+    image: certYukta,
     link: "https://drive.google.com/file/d/17SMaXf2AKjgAc8WBmdGePCNSgcxd0W07/view",
   },
   {
     title: "L&T Course: Python Programming and Web Development",
     desc: "Completed course on Python programming and web development concepts",
-    image: "https://drive.google.com/uc?id=1pITWzsKPgji7SgPJ7xq12lw0QiV3CUbv",
+    image: certLT,
     link: "https://drive.google.com/file/d/1pITWzsKPgji7SgPJ7xq12lw0QiV3CUbv/view",
   },
   {
     title: "National Level Workshop: Cybersecurity Trends",
     desc: "Attended workshop on latest trends and practices in cybersecurity",
-    image: "https://drive.google.com/uc?id=1qh5js585yEj3uIaJ0A7r7YPs1bswc_3-",
+    image: certCyber,
     link: "https://drive.google.com/file/d/1qh5js585yEj3uIaJ0A7r7YPs1bswc_3-/view",
   },
   {
     title: "1st International Conference: Transcendent Mathematics",
     desc: "Participated in international conference on advanced mathematics concepts",
-    image: "https://drive.google.com/uc?id=1zDehh-25sWojiexuq_sLDZuC1ydPFyPR",
+    image: certMath,
     link: "https://drive.google.com/file/d/1zDehh-25sWojiexuq_sLDZuC1ydPFyPR/view",
   },
 ];
