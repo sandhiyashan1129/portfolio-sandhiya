@@ -49,8 +49,9 @@ export function Hero() {
           </p>
           <div className="flex flex-wrap gap-4">
             <a
-              href="/resume.pdf"
-              download
+              href="https://drive.google.com/file/d/17X396kHCsxKnscR82Kb0InNeYIHZXE2J/view"
+              target="_blank"
+              rel="noopener noreferrer"
               className="group inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-gradient-primary text-primary-foreground font-medium shadow-glow hover:scale-105 transition-smooth"
             >
               <Download className="w-4 h-4 group-hover:translate-y-0.5 transition-smooth" />

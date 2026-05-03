@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { AnimatedHeading } from "./AnimatedHeading";
 
 const stats = [
-  { icon: Code, label: "Projects Built", value: "10+" },
+  { icon: Code, label: "Projects Built", value: "3+" },
   { icon: Rocket, label: "Internships", value: "3" },
   { icon: GraduationCap, label: "Certifications", value: "6+" },
   { icon: Users, label: "Tech Communities", value: "4+" },
