@@ -7,31 +7,31 @@ import p3 from "@/assets/project-3.jpg";
 
 const projects = [
   {
-    title: "ShopSphere — E-Commerce Platform",
+    title: "Portfolio Website",
     description:
-      "A full-stack e-commerce app with product catalog, cart, Stripe payments, and an admin dashboard for inventory management.",
+      "A personal portfolio website showcasing my skills, projects, and achievements with a modern and responsive design.",
     image: p1,
-    tech: ["React", "Node.js", "Express", "MongoDB", "Stripe"],
-    github: "https://github.com",
-    demo: "https://example.com",
+    tech: ["HTML", "CSS", "JavaScript"],
+    github: "https://github.com/sandhiyashan1129/sandhiya-s-digital-showcase.git",
+    demo: "",
   },
   {
-    title: "ConnectU — Social Media App",
+    title: "Museum of Candy",
     description:
-      "A real-time social platform with posts, likes, comments, follow system, and live chat powered by Socket.io.",
+      "A visually appealing website built using Bootstrap, featuring responsive design and interactive UI elements.",
     image: p2,
-    tech: ["MERN", "Socket.io", "JWT", "Cloudinary"],
-    github: "https://github.com",
-    demo: "https://example.com",
+    tech: ["HTML", "CSS", "Bootstrap"],
+    github: "https://github.com/sandhiyashan1129/BOOTSTRAP.git",
+    demo: "https://museum-of-candyyy.netlify.app/",
   },
   {
-    title: "TaskFlow — Kanban Manager",
+    title: "Pizza Website",
     description:
-      "Drag-and-drop Kanban board with team collaboration, deadlines, and analytics. Built for productivity-focused teams.",
+      "A responsive pizza ordering website with attractive UI design and smooth navigation experience.",
     image: p3,
-    tech: ["React", "Redux", "Express", "MongoDB"],
-    github: "https://github.com",
-    demo: "https://example.com",
+    tech: ["HTML", "CSS", "JavaScript"],
+    github: "https://github.com/sandhiyashan1129/webpage-projects.git",
+    demo: "https://pizza-website-project.netlify.app/",
   },
 ];
 
@@ -92,22 +92,26 @@ export function Projects() {
                   ))}
                 </div>
                 <div className="flex gap-3">
-                  <a
-                    href={p.github}
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg border border-border hover:border-primary hover:text-primary transition-smooth text-sm"
-                  >
-                    <Github className="w-4 h-4" /> Code
-                  </a>
-                  <a
-                    href={p.demo}
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-gradient-primary text-primary-foreground hover:scale-105 transition-smooth text-sm font-medium"
-                  >
-                    <ExternalLink className="w-4 h-4" /> Demo
-                  </a>
+                  {p.github && (
+                    <a
+                      href={p.github}
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg border border-border hover:border-primary hover:text-primary transition-smooth text-sm"
+                    >
+                      <Github className="w-4 h-4" /> Code
+                    </a>
+                  )}
+                  {p.demo && (
+                    <a
+                      href={p.demo}
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-gradient-primary text-primary-foreground hover:scale-105 transition-smooth text-sm font-medium"
+                    >
+                      <ExternalLink className="w-4 h-4" /> Demo
+                    </a>
+                  )}
                 </div>
               </div>
             </motion.article>
