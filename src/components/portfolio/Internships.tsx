@@ -15,7 +15,7 @@ const internships = [
     image: i1,
   },
   {
-    company: "Ideal Plantek",
+    company: "TIDEL Park",
     role: "Web Development Intern",
     duration: "23/06/2025 – 07/07/2025",
     description:
